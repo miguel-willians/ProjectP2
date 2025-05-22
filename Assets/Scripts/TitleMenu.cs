@@ -10,13 +10,6 @@ public class TitleMenu : MonoBehaviour
     [SerializeField]
     private string _nextSceneName = "GameplayScene";
 
-    private void Awake()
-    {
-        if (_titleText != null)
-        {
-            _titleText.text = Application.productName;
-        }
-    }
 
     public void StartGameAction()
     {
