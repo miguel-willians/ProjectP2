@@ -29,11 +29,7 @@ public class PlayerController : MonoBehaviour
         if (collision.contacts[0].normal.y > 0.5f)
             isGrounded = true;
 
-        // Checa se a cor da plataforma � compat�vel
         if (collision.gameObject.CompareTag("RedPlatform") && ColorManager.Instance.currentColor != ColorManager.PlayerColor.Red)
-            ReloadScene();
-
-        if (collision.gameObject.CompareTag("GreenPlatform") && ColorManager.Instance.currentColor != ColorManager.PlayerColor.Green)
             ReloadScene();
 
         if (collision.gameObject.CompareTag("BluePlatform") && ColorManager.Instance.currentColor != ColorManager.PlayerColor.Blue)
