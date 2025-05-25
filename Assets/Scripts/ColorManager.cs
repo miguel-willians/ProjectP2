@@ -4,8 +4,8 @@ public class ColorManager : MonoBehaviour
 {
     public static ColorManager Instance;
 
-    public enum PlayerColor { Red, Blue }
-    public PlayerColor currentColor = PlayerColor.Red;
+    public enum PlayerColor { Silver, Gold }
+    public PlayerColor currentColor = PlayerColor.Silver;
 
     private SpriteRenderer sprite;
 
@@ -18,13 +18,13 @@ public class ColorManager : MonoBehaviour
     void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
-        SetColor(PlayerColor.Red);  // Cor inicial vermelha
+        SetColor(PlayerColor.Silver);  // Cor inicial prata
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1)) SetColor(PlayerColor.Red);
-        if (Input.GetKeyDown(KeyCode.Alpha2)) SetColor(PlayerColor.Blue);
+        if (Input.GetKeyDown(KeyCode.Alpha1)) SetColor(PlayerColor.Silver);
+        if (Input.GetKeyDown(KeyCode.Alpha2)) SetColor(PlayerColor.Gold);
     }
 
     public void SetColor(PlayerColor color)
@@ -33,11 +33,11 @@ public class ColorManager : MonoBehaviour
 
         switch (color)
         {
-            case PlayerColor.Red:
-                sprite.color = Color.red;
+            case PlayerColor.Silver:
+                sprite.color = new Color(0.75f, 0.75f, 0.75f); // Silver
                 break;
-            case PlayerColor.Blue:
-                sprite.color = Color.blue;
+            case PlayerColor.Gold:
+                sprite.color = new Color(1.0f, 0.84f, 0.0f); // Gold
                 break;
         }
     }

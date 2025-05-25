@@ -26,13 +26,15 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        // Verifica se está no chão
         if (collision.contacts[0].normal.y > 0.5f)
             isGrounded = true;
 
-        if (collision.gameObject.CompareTag("RedPlatform") && ColorManager.Instance.currentColor != ColorManager.PlayerColor.Red)
+        // Verifica se a plataforma corresponde à cor atual
+        if (collision.gameObject.CompareTag("SilverPlatform") && ColorManager.Instance.currentColor != ColorManager.PlayerColor.Silver)
             ReloadScene();
 
-        if (collision.gameObject.CompareTag("BluePlatform") && ColorManager.Instance.currentColor != ColorManager.PlayerColor.Blue)
+        if (collision.gameObject.CompareTag("GoldPlatform") && ColorManager.Instance.currentColor != ColorManager.PlayerColor.Gold)
             ReloadScene();
     }
 
