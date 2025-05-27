@@ -129,7 +129,7 @@ Desafio, foco, frustração criativa (tentativa e erro), satisfação ao complet
 - Narrativa complexa ou diálogos.
 - Fases abertas ou exploratórias.
 
-### 📅 Cronograma
+## 📅 Cronograma
 
 | Mês | Tarefa |
 |-----|--------|
